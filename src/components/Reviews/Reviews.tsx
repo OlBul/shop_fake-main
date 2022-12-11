@@ -6,7 +6,6 @@ import {
     TextField,
     Typography,
 } from '@mui/material'
-import Rating from 'components/Rating/Rating'
 import React, { useState } from 'react'
 import './Reviews.scss'
 import Accordion from '@mui/material/Accordion'
@@ -27,7 +26,6 @@ const Reviews = (props: Props) => {
     const arrReviews = useAppSelector((state) => state.reviews)
 
     const [reviews, setReviews] = useState<Review[]>(arrReviews)
-    const [rating, setRating] = useState<number>(0)
     const [newReview, setNewReview] = useState<Review>({
         id: 0,
         name: '',
@@ -60,7 +58,6 @@ const Reviews = (props: Props) => {
                 name: '',
                 text: '',
             }))
-            setRating(0)
         }
     }
 
@@ -135,20 +132,6 @@ const Reviews = (props: Props) => {
                                     minRows={5}
                                     value={newReview.text}
                                     onChange={handleChangeText}
-                                    //cols={55}
-                                />
-                            </div>
-                            <br />
-                            <div>
-                                <Typography variant="h6">Rate us</Typography>
-                                <Rating
-                                    rating={rating}
-                                    onRating={(rate) => setRating(rate)}
-                                    count={5}
-                                    color={{
-                                        filled: 'yellow',
-                                        unfilled: 'black',
-                                    }}
                                 />
                             </div>
                             <br />
