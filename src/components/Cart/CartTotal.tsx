@@ -18,7 +18,7 @@ const CartTotal = ({ productsInCart }: Props) => {
     const ProductsObject: ProductsObject = getProductsObject(productsArray)
     return (
         <div>
-            Total{' '}
+            Total:{' '}
             {keys(productsInCart).reduce(
                 (total, productId) =>
                     total +
