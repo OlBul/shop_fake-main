@@ -98,13 +98,19 @@ const Reviews = (props: Props) => {
                         </Accordion>
                     ))}
                 </div>
-                <form onSubmit={onSend}>
+                <form
+                    onSubmit={onSend}
+                    /*  style={{
+                        maxWidth: 500,
+                        display: 'flex',
+                        justifyContent: 'center',
+                    }} */
+                    className="review-form"
+                >
                     <Card
                         variant="outlined"
                         style={{
-                            maxWidth: 500,
-                            display: 'flex',
-                            justifyContent: 'center',
+                            minWidth: 500,
                         }}
                     >
                         <CardContent>

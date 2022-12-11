@@ -1,5 +1,10 @@
 .reviews {
-    margin: 100px;
+    margin: 100px auto;
+}
+
+.review-form {
+    display: flex;
+    justify-content: center;
 }
 
 .reviews-cards {
